@@ -1,1 +1,1 @@
-# test_auto
+# Repozytorium zawiera testy automatyczne tworzone w Cypress
