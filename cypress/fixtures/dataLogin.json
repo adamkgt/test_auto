@@ -1,0 +1,6 @@
+{
+    "username": "test@test.com",
+    "password": "Test123!@#test",
+    "wrongUsername": "admin",
+    "wrongPassword": "admin"
+  }
