@@ -1,5 +1,4 @@
 const { defineConfig } = require("cypress");
-const { defineConfig } = require("cypress");
 const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
 module.exports = defineConfig({
@@ -30,6 +29,6 @@ module.exports = defineConfig({
       require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin(on, config);
       return config;
     },
-    specPattern: "cypress/e2e/**/*.feature"
+    specPattern: "cypress/my_tests/**/*.feature"
   }
 });
