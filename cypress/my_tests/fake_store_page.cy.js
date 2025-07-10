@@ -44,7 +44,7 @@ describe('User registration', () => {
       cy.get('#password').type(dataLogin.wrongPassword); 
       cy.get('#customer_login > div.u-column1.col-1 > form > p:nth-child(3) > button').click(); 
       cy.url().should('include', '/moje-konto'); 
-      cy.get('.woocommerce-error').should('contains.text', 'Błąd: brak admin wśród zarejestrowanych w witrynie użytkowników. Jeśli nie masz pewności co do nazwy użytkownika, użyj adresu e-mail?'); 
+      cy.get('.woocommerce-error').should('contain.text', 'Błąd: brak admin wśród zarejestrowanych w witrynie użytkowników. Jeśli nie masz pewności co do nazwy użytkownika, użyj adresu e-mail.')
     })
   })
 
