@@ -13,7 +13,6 @@ jobs:
         with:
           node-version: 18
 
- 
       - name: Cache Cypress binary
         uses: actions/cache@v3
         with:
@@ -22,11 +21,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-cypress-
 
-      
       - run: npm install
 
-      
       - run: npx cypress install
 
-      
       - run: ./node_modules/.bin/cypress run --headless
