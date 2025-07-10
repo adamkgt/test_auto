@@ -20,6 +20,7 @@ describe('User registration', () => {
     cy.get('#reg_password').type(dataLogin.wrongPassword);
     cy.get('button.woocommerce-Button.woocommerce-button.button.woocommerce-form-register__submit');
     cy.url().should('include', '/moje-konto');
+    cy.wait(3000);
     cy.get('#password_strength').should('contain.text', 'Bardzo słabe - Proszę wpisać mocniejsze hasło.');
     })
    })
