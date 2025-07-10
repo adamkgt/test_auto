@@ -13,10 +13,20 @@ jobs:
         with:
           node-version: 18
 
+ 
+      - name: Cache Cypress binary
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/Cypress
+          key: ${{ runner.os }}-cypress-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-cypress-
+
+      
       - run: npm install
 
+      
       - run: npx cypress install
 
-      - run: chmod +x ./node_modules/.bin/cypress
-
+      
       - run: ./node_modules/.bin/cypress run --headless
