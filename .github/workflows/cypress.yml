@@ -18,8 +18,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set execute permission 
+      - name: Set execute permission
         run: chmod +x ./node_modules/.bin/cypress
 
       - name: Run Cypress tests
-        run: npx cypress run --no-sandbox
+        run: ./node_modules/.bin/cypress run --no-sandbox
