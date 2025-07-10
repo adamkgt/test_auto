@@ -28,4 +28,4 @@ jobs:
 
       - run: npx cypress install
 
-      - run: ./node_modules/.bin/cypress run --headless
+      - run: ./node_modules/.bin/cypress run --browser chrome --headless
