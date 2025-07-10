@@ -23,6 +23,9 @@ jobs:
 
       - run: npm install
 
+      - name: Set execute permission for Cypress
+        run: chmod +x ./node_modules/.bin/cypress
+
       - run: npx cypress install
 
       - run: ./node_modules/.bin/cypress run --headless
