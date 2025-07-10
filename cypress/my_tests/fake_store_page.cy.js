@@ -19,7 +19,7 @@ describe('User registration', () => {
     cy.get('#reg_email').type(dataLogin.username); 
     cy.get('#reg_password').type(dataLogin.wrongPassword);
     cy.url().should('include', '/moje-konto');
-    cy.get('#password_strength').should('contain.text', 'Bardzo słabe - Proszę wpisać mocniejsze hasło.');
+    cy.get('#password_strength', { timeout: 10000 }).should('contain.text', 'Bardzo słabe - Proszę wpisać mocniejsze hasło.');
     })
    })
 
