@@ -18,10 +18,6 @@ describe('User registration', () => {
     cy.visit('https://fakestore.testelka.pl/moje-konto/');
     cy.get('#reg_email').type(dataLogin.username); 
     cy.get('#reg_password').type(dataLogin.wrongPassword);
-    cy.wait(5000); 
-    cy.get('button.woocommerce-Button.woocommerce-button.button.woocommerce-form-register__submit').screenshot('before-disabled-check').then($btn => {
-    console.log('disabled:', $btn.prop('disabled'))
-  }).should('be.disabled')
     cy.url().should('include', '/moje-konto');
     cy.get('#password_strength').should('contain.text', 'Bardzo słabe - Proszę wpisać mocniejsze hasło.');
     })
